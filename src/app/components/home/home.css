@@ -1,0 +1,63 @@
+section {
+  background-image: url("/images/happy-young-man-woman-posing-together.jpg");
+  background-position: top;
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+section .content {
+  width: 40%;
+}
+
+section .content h1 {
+  text-shadow: 7px 7px 6px rgba(140, 100, 63);
+}
+
+.loader {
+  position: absolute;
+  bottom: 5%;
+  left: 48%;
+  width: 4rem;
+  height: 3.75rem;
+}
+.loader::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #8a6646;
+  width: 64px;
+  height: 32px;
+  border-radius: 0 0 50px 50px;
+  animation: move 0.5s linear infinite alternate;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  background: #a19593;
+
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%) rotate(0deg);
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+@keyframes move {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}

@@ -1,0 +1,18 @@
+.navbar {
+  transition: all 1s;
+  background-color: #6b6670;
+}
+
+.color-active {
+  background-color: #8b633f;
+  color: #dad4d6;
+  padding: 10px;
+  box-shadow: rgba(196, 183, 185) 1px 0px 10px 3px;
+}
+
+nav .container .style {
+  color: #eeeaea;
+  font: italic bold Georgia, Serif;
+  text-shadow: -5px 4px 2px #000000;
+  font-weight: 700;
+}

@@ -1,0 +1,28 @@
+<section>
+  <div class="container">
+    <div class="row">
+      @for (move of moveProduct.slice(0,6); track move.id) {
+
+      <div class="col-md-3 g-4">
+        <div class="card h-100 text-center shadow-lg">
+          <img
+            class="card-img-top shadow-lg"
+            [src]="'//image.tmdb.org/t/p/w500' + move.backdrop_path"
+            [alt]="move.title"
+          />
+          <div class="card-body">
+            @if (move.title) {
+            <h4 class="card-title py-3">{{ move.title }}</h4>
+            } @else {
+            <h4 class="card-title py-3">{{ move.name }}</h4>
+            }
+            <p class="card-text">
+              {{ move.overview.split(" ", 18).join(" ") }}
+            </p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
